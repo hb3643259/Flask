@@ -8,6 +8,6 @@ class Config(object):
 
     #添加数据库配置，开发时使用轻量级的SQLite，部署在服务器中使用MySQL，不用改变代码
     #默认数据库地址
-    SQLALCHEMY_DATABASE_URL=os.environ.get("DATABASE_URL") or "sqlite:///"+os.path.join(basedir,'app.db')
+    SQLALCHEMY_DATABASE_URI=os.environ.get("DATABASE_URL") or "sqlite:///"+os.path.join(basedir,'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False#不向应用发送消息
 
